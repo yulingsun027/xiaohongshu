@@ -2,6 +2,7 @@
   "pages": [
     "pages/landing/index",
     "pages/story/index",
+    "pages/profile/index",
     "pages/story/detail",
     "pages/product/index",
     "pages/product/detail",
@@ -13,6 +14,28 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Weixin",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/story/index",
+        "text": "Home",
+        "iconPath": "/pages/images/home.jpg",
+        "selectedIconPath": "/pages/images/home.jpg"
+      },
+      {
+        "pagePath": "pages/product/index",
+        "text": "Shop",
+        "iconPath": "/pages/images/shop.jpg",
+        "selectedIconPath": "/pages/images/shop.jpg"
+      },
+      {
+        "pagePath": "pages/profile/index",
+        "text": "Me",
+        "iconPath": "/pages/images/user.png",
+        "selectedIconPath": "/pages/images/user.png"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
