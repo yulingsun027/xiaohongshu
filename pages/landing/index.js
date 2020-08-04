@@ -12,8 +12,13 @@ Page({
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
-      url: '../logs/logs'
+      url: '/pages/story/index'
     })
+  },
+  goToStories: function(e) {
+    wx.navigateTo({
+      url: '/pages/story/index'
+    });
   },
   onLoad: function () {
     if (app.globalData.userInfo) {
