@@ -8,17 +8,22 @@
   align-items: center;
 }
 
-.card-product img {
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
+.avatar {
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
 }
-.WechatID {
-  font-size: 10px;
+
+.card-product .avatar {
+  margin: 0 20px 0 20px;
+}
+
+.post-feed-info {
+  text-align: center;
+}
+
+.nickname {
+  font-size: 18px;
 }
 
 
-.card-product .card-product-infos {
-  padding: 16px;
-}
