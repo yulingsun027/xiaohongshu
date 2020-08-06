@@ -37,3 +37,7 @@
   width: 30px;
   height: 30px
 }
+.imageStory {
+  max-width: 12450px;
+  max-height: 12450px;
+}
