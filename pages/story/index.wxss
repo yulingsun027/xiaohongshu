@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
 }
-.card-product {
+/* .card {
   display: flex;
   padding: 5px 5px;
   object-fit: contain;
@@ -13,7 +13,7 @@
   float: left;
   -webkit-box-sizing: border-box;
   -webkit-border-radius: 3px;
-}
+} */
 .card {
   background-color: white;
   border-radius: 0.25rem;
@@ -21,6 +21,12 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  padding: 5px 5px;
+  object-fit: contain;
+  width: 50%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -webkit-border-radius: 3px;
 }
 .avatar {
   border-radius: 50%;

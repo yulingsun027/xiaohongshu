@@ -7,7 +7,8 @@ Page({
    * Page initial data
    */
   data: {
-    currentUser:{}
+    currentUser:{},
+    story:[]
   },
 
   /**
@@ -23,7 +24,7 @@ Page({
     });
   },
   onLoad: function (options) {
-
+    
   },
 
   /**
