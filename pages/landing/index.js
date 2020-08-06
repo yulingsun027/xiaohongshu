@@ -4,56 +4,36 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    motto: "explore the small beauty of the world",
+    currentUser: {},
+    
   },
   //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '/pages/story/index'
+  
+  goToStories:function(){
+    wx.switchTo({
+      url: '/pages/profile/index'
     })
   },
-  goToStories: function(e) {
-    wx.switchTab({
-      url: '/pages/story/index'
+
+  onLoad: function () {
+    
+  },
+  userInfoHandler: function(data){
+    wx.BaaS.auth.loginWithWechat(data).then(user =>{
+      app.globalData.userInfo = user;
+      wx.setStorageSync('userInfo', user);
+      this.setData({
+        currentUser: user
+      })
     });
   },
-  onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
-  },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  }
+  // getUserInfo: function(e) {
+  //   console.log(e)
+  //   app.globalData.userInfo = e.detail.userInfo
+  //   this.setData({
+  //     userInfo: e.detail.userInfo,
+  //     hasUserInfo: true
+  //   })
+  // }
 })

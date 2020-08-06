@@ -1,16 +1,27 @@
 // pages/profile/index.js
+const app = getApp();
+
 Page({
 
   /**
    * Page initial data
    */
   data: {
-
+    currentUser:{}
   },
 
   /**
    * Lifecycle function--Called when page load
    */
+  userInfoHandler: function(data){
+    wx.BaaS.auth.loginWithWechat(data).then(user =>{
+      app.globalData.userInfo = user;
+      wx.setStorageSync('userInfo', user);
+      this.setData({
+        currentUser: user
+      })
+    });
+  },
   onLoad: function (options) {
 
   },
@@ -26,7 +37,10 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-
+    this.setData({
+    
+      currentUser: app.globalData.userInfo,
+    });
   },
 
   /**
