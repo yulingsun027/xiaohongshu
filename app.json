@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/profile/index",
     "pages/landing/index",
     "pages/story/index",
-    "pages/profile/index",
     "pages/story/detail",
     "pages/product/index",
     "pages/product/detail",
@@ -36,6 +36,12 @@
         "selectedIconPath": "/pages/images/me.png"
       }
     ]
+  },
+  "plugins": {
+    "sdkPlugin": {
+      "version": "3.9.0",
+      "provider": "wxc6b86e382a1e3294"
+    }
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

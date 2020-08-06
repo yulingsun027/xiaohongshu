@@ -8,3 +8,4 @@
     <view class="card-product-infos">
     <view class="nickname">Username: {{currentUser.nickname}}</view>
 </view>
+
