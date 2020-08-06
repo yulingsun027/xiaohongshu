@@ -1,2 +1,32 @@
-<!--pages/story/index.wxml-->
-<text>pages/story/index.wxml</text>
+<view class="cards">
+  <view class="card-product">
+    <view class="card">
+      <image src="https://img.redbull.com/images/c_crop,x_740,y_0,h_1080,w_864/c_fill,w_860,h_1075/q_auto,f_auto/redbullcom/2018/10/01/cffd44d9-3d3f-424c-8e7f-7ad5bc33c668/forza-horizon-4-1964-jaguar-lightweight-e-type"></image> 
+      <view class="card-content">
+        <view class="h1">Title</view>
+        <view class="p">Description</view>
+    </view>
+    <view class="storyBar">
+    <image src="/pages/images/avatar.jpeg" class="avatar"></image>
+    <view class="p">Username</view>
+    <image src="/pages/images/heart.png" class="likeButton"></image>
+    <view class="p2"># of likes</view>
+    </view>
+    </view>
+</view>
+<view class="card-product">
+    <view class="card">
+      <image src="https://img.redbull.com/images/c_crop,x_740,y_0,h_1080,w_864/c_fill,w_860,h_1075/q_auto,f_auto/redbullcom/2018/10/01/cffd44d9-3d3f-424c-8e7f-7ad5bc33c668/forza-horizon-4-1964-jaguar-lightweight-e-type"></image> 
+      <view class="card-content">
+        <view class="h1">Title</view>
+        <view class="p">Description</view>
+    </view>
+    <view class="storyBar">
+    <image src="/pages/images/avatar.jpeg" class="avatar"></image>
+    <view class="p">Username</view>
+    <image src="/pages/images/heart.png" class="likeButton"></image>
+    <view class="p2"># of likes</view>
+    </view>
+    </view>
+</view>
+</view>
