@@ -20,20 +20,20 @@
       {
         "pagePath": "pages/story/index",
         "text": "Home",
-        "iconPath": "/pages/images/home.jpg",
-        "selectedIconPath": "/pages/images/home.jpg"
+        "iconPath": "/pages/images/home.png",
+        "selectedIconPath": "/pages/images/home.png"
       },
       {
         "pagePath": "pages/product/index",
         "text": "Shop",
-        "iconPath": "/pages/images/shop.jpg",
-        "selectedIconPath": "/pages/images/shop.jpg"
+        "iconPath": "/pages/images/shop.png",
+        "selectedIconPath": "/pages/images/shop.png"
       },
       {
         "pagePath": "pages/profile/index",
         "text": "Me",
-        "iconPath": "/pages/images/user.png",
-        "selectedIconPath": "/pages/images/user.png"
+        "iconPath": "/pages/images/me.png",
+        "selectedIconPath": "/pages/images/me.png"
       }
     ]
   },
