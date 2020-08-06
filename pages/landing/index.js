@@ -16,7 +16,7 @@ Page({
     })
   },
   goToStories: function(e) {
-    wx.navigateTo({
+    wx.switchTab({
       url: '/pages/story/index'
     });
   },
