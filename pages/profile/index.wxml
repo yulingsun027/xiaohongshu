@@ -1,2 +1,9 @@
 <!--pages/profile/index.wxml-->
-<text>pages/profile/index.wxml</text>
+<view class="card-product">
+  <img src="#"/>
+  <view class="card-product-infos">
+    <view> User Name: </view>
+    <view class="WechatID"> Wechat ID: </view>
+  </view>
+</view>
+
