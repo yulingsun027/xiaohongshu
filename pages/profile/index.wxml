@@ -1,9 +1,10 @@
 <!--pages/profile/index.wxml-->
-<view class="card-product">
-  <img src="#"/>
-  <view class="card-product-infos">
-    <view> User Name: </view>
-    <view class="WechatID"> Wechat ID: </view>
-  </view>
+<view class="btn-area">
+    <button wx:if="{{!currentUser}}" formType="submit" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">Login</button>
 </view>
 
+<view class="card-product">
+  <image class="avatar" src="{{currentUser.avatar}}"></image>
+    <view class="card-product-infos">
+    <view class="nickname">Username: {{currentUser.nickname}}</view>
+</view>
