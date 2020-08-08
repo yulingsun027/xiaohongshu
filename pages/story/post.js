@@ -8,6 +8,8 @@ Page({
    */
   data: {
     currentUser:{},
+    title:"",
+    description:"",
     imgURL:[]
   },
 
@@ -37,7 +39,41 @@ Page({
       urls: [url]  // Array of temp files
     })
   },
+  bindTitleInput: function(e){
+    console.log(e);
+    this.setData({
+      title: e.detail.value
+    })
+  }, 
 
+  bindDesInput: function(e){
+    this.setData({
+      description: e.detail.value
+    })
+  }, 
+
+  formSubmit: function (event){
+    console.log('create a story', event);
+    let Story = new wx.BaaS.TableObject('redStory');
+    let myStory = Story.create();
+    console.log(this.data);
+    let data = {
+        // review's content and rating
+        userName: this.data.currentUser.nickname,
+        userAvatar: this.data.currentUser.avatar,
+        title: this.data.title,
+        description:this.data.description,
+        storyImg: this.data.imgURL[0],
+    };
+    console.log(this.data.imgURL);
+
+    myStory.set(data).save().then(res => {
+      console.log('save story', res);
+      wx.switchTab({
+        url: '/pages/story/index',
+      })                                          
+    })
+  },
 
   onLoad: function (options) {
 

@@ -1,16 +1,17 @@
 
-<!-- <image class="avatar" src="{{currentUser.avatar}}"></image> -->
-
 <form bindsubmit="formSubmit" bindreset="formReset">
 
   <view class="section">
-    <view class="h1 section__title">title:</view>
-    <input class="p" name="name" value="{{userInfo.nickName}}" placeholder="your post title" />
+    <view class="h1 section__title">
+      <input  bindinput="bindTitleInput" placeholder="title"/>
+    </view>
   </view>
   
   <view class="section">
-    <view class="h1 section__title">description:</view>
-    <textarea class="p" name="content" placeholder="what's your story?" ></textarea> 
+    <view class="h1 section__title">
+    <input  bindinput="bindDesInput" placeholder="description:"/>
+    </view>
+    <!-- <textarea class="p" name="content" placeholder="what's your story?" ></textarea>  -->
   </view>
 
 <view class="section">
@@ -21,6 +22,6 @@
   </view>
 
   <view class="h1 btn-area">
-    <button formType="post">Submit</button>
+    <button formType="post" bindtap="formSubmit">Submit</button>
   </view>
 </form>
