@@ -12,7 +12,6 @@ Page({
    * Lifecycle function--Called when page load
    */
   toDetail: function(e){
-    console.log('select story',e);
     let id = e.currentTarget.dataset.id;
     wx.navigateTo({
       url: `/pages/story/detail?id=${id}`,
@@ -25,7 +24,7 @@ Page({
     Story.find().then((res) =>{
       console.log('res', res);
       this.setData({
-        story: res.data.objects
+        stories: res.data.objects
       })
     });
   },
