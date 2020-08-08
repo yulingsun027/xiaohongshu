@@ -6,7 +6,7 @@ Page({
    */
   data: {
 
-    products:[]
+    products:[],
       indicatorDots:true,
       autoplay:true,
       interval:5000,

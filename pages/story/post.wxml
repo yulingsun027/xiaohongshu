@@ -1,27 +1,32 @@
+<view class="top-banner">
+<text class="h1 top-banner-text">Share Your Posts</text>
+</view>
 
+<view class="submission-container">
 <form bindsubmit="formSubmit" bindreset="formReset">
 
   <view class="section">
-    <view class="h1 section__title">
+    <view style="padding-left: 10px;" class="h1 section__title">
       <input  bindinput="bindTitleInput" placeholder="title"/>
     </view>
   </view>
   
   <view class="section">
-    <view class="h1 section__title">
+    <view style="padding-left: 10px;" class="h1 section__title">
     <input  bindinput="bindDesInput" placeholder="description:"/>
     </view>
     <!-- <textarea class="p" name="content" placeholder="what's your story?" ></textarea>  -->
   </view>
 
 <view class="section">
-  <view class="h1 section__title">image:</view>
+  <view style="padding-left: 10px;" class="h1 section__title">image:</view>
   <image wx:for="{{imgURL}}" src="{{item}}" bindtap="previewMyImage" data-url="{{item}}"></image>
-    <textarea class="p" name="content" placeholder="this is my img!" ></textarea> 
-     <button bindtap="selectImg">select</button>
+    <textarea style="padding-left: 10px;" class="p" name="content" placeholder="this is my img!" ></textarea> 
+     <button bindtap="selectImg">SELECT</button>
   </view>
 
   <view class="h1 btn-area">
     <button formType="post" bindtap="formSubmit">Submit</button>
   </view>
 </form>
+</view>
