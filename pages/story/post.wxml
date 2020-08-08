@@ -15,7 +15,9 @@
 
 <view class="section">
   <view class="h1 section__title">image:</view>
-    <textarea class="p" name="content" placeholder="select an img!" ></textarea> 
+  <image wx:for="{{imgURL}}" src="{{item}}" bindtap="previewMyImage" data-url="{{item}}"></image>
+    <textarea class="p" name="content" placeholder="this is my img!" ></textarea> 
+     <button bindtap="selectImg">select</button>
   </view>
 
   <view class="h1 btn-area">
