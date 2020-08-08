@@ -8,7 +8,12 @@ Page({
 
   },
 
-
+  toProductDetail: function(e){
+    let id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: `/pages/product/detail?id=${id}`,
+    })
+  },
 
   /**
    * Lifecycle function--Called when page load
