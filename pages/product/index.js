@@ -5,6 +5,8 @@ Page({
    * Page initial data
    */
   data: {
+
+    products:[]
       indicatorDots:true,
       autoplay:true,
       interval:5000,
@@ -14,6 +16,7 @@ Page({
         "/pages/images/chris.jpg",
         "/pages/images/alliance.jpg",
       ]
+
   },
 
   toProductDetail: function(e){
@@ -27,7 +30,14 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    
+    let tableName = "redProduct";
+    let Product = new wx.BaaS.TableObject(tableName);
+    Product.find().then((res) =>{
+      console.log('res', res);
+      this.setData({
+        products: res.data.objects
+      })
+    });
   },
 
   /**
