@@ -1,4 +1,5 @@
 <!--pages/profile/index.wxml-->
+
 <view class="btn-area">
     <button wx:if="{{!currentUser}}" formType="submit" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">Login</button>
 </view>
