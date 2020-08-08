@@ -14,7 +14,7 @@
   </view>
 
 <view class="section">
-    <view class="h1 section__title">image:</view>
+  <view class="h1 section__title">image:</view>
     <textarea class="p" name="content" placeholder="select an img!" ></textarea> 
   </view>
 
