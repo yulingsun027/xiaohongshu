@@ -37,8 +37,16 @@
 </view>
 
 
-
-  <text wx:if="{{tabName == 'cart'}}">show cart content here</text>
+<view class="cards" wx:if="{{tabName == 'cart'}}">
+  <view class="card" wx:for="{{orders}}" wx:for-item="myorder" data-id="{{myorder.id}}">
+      <image class="imageproduct" src="{{myorder.product_id.Productimage}}"></image> 
+      <view class="card-content">
+        <view class="h1">{{myorder.product_id.name}}</view>
+        <view class="p">{{myorder.product_id.price}}</view>
+      </view>
+    </view>
+</view>
+  
   <!-- <view class="card"> 
   
     <image class="card-image" src="/pages/images/Nike.jpg"> </image>

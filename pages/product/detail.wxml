@@ -7,6 +7,6 @@
     <view style="padding-left: 10px;" class="p2 product-description">{{product.description}}
     </view>
     <view style="padding-left: 10px;" class="h1 btn-area">
-    <button style="font-weight: bold;" class="h1">Add to cart</button>
+    <button style="font-weight: bold;" class="h1" bindtap="addtoCart">Add to cart</button>
   </view>
   </view>

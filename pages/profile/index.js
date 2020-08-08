@@ -9,7 +9,9 @@ Page({
   data: {
     currentUser:{},
     story:[],
-    tabName:''
+    tabName:'',
+    orders:[]
+
   },
   /**
    * Lifecycle function--Called when page load
@@ -55,6 +57,16 @@ Page({
       console.log('comment detail', res);
       this.setData({story: res.data.objects})
     })
+
+    let tableName1 = "redOrder";
+  
+    let Order = new wx.BaaS.TableObject(tableName1);
+    Order.expand(['product_id']).find().then((res) =>{
+      console.log('res1', res);
+      this.setData({
+        orders: res.data.objects
+      })
+    });
   },
 
   /**

@@ -11,6 +11,7 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
+
   onLoad: function (options) {
     console.log("this is a product page",options)
     let tableName1 = 'redProduct';
@@ -22,6 +23,25 @@ Page({
     });
   },
 
+  addtoCart: function (e){
+    console.log(e);
+    let productID = e.currentTarget.id;
+    productID = this.data.product.id;
+    console.log('productid',productID);
+    let Order = new wx.BaaS.TableObject('redOrder')
+    let order = Order.create()
+    let data = {
+      product_id: productID,
+    }
+    order.set(data).save().then((res)=>{
+      wx.showToast({
+        title: 'order added!',
+        icon:'success',
+        duration:2000,
+        mask: true
+      })
+    })
+},
   /**
    * Lifecycle function--Called when page is initially rendered
    */
