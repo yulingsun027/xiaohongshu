@@ -13,23 +13,38 @@
 </view>
 
 <view class="cards"> 
-<view class="tabss">
-<view style="padding-left: 60px;" class="h1">My Post</view>
-<view style="padding-left: 60px;" class="h1">My Cart</view>
+<view class="tabs">
+<view style="padding-left: 60px;" class="h1 {{tabName == 'post' ? 'activeTab' : ''}}" bindtap="viewTab" data-name="post">My Post</view>
+<view style="padding-left: 60px;" class="h1 {{tabName == 'cart' ? 'activeTab' : ''}}" bindtap="viewTab" data-name="cart">My Cart</view>
 </view>
 
-  <view class="card"> 
+<!-- display different tabs -->
+<!-- <text wx:if="{{tabName == 'post'}}">show post content here</text> -->
+<view class="cards" wx:if="{{tabName == 'post'}}">
+    <view class="card" wx:for="{{story}}" wx:for-item="mystory" data-id="{{mystory.id}}">
+      <image class="imageStory" src="{{mystory.storyImg}}"></image> 
+      <view class="card-content">
+        <view class="h1">{{mystory.title}}</view>
+        <view class="p">{{story.description}}</view>
+        <view class="storyBar">
+        <!-- <image src="{{story.userAvatar}}" class="avatar"></image> -->
+        <!-- <view class="p">{{mystory.username}}</view> -->
+        <!-- <image src="/pages/images/heart.png" class="likeButton"></image> -->
+      </view>
+      </view>
+      
+    </view>
+</view>
+
+
+
+  <text wx:if="{{tabName == 'cart'}}">show cart content here</text>
+  <!-- <view class="card"> 
   
     <image class="card-image" src="/pages/images/Nike.jpg"> </image>
     <view class="h1 product">This is my Product </view>
     <view class="p2 product-description">This is my description 
     </view>
-  </view>
+  </view> -->
 
-  <view class="card"> 
-    <image bindTap="toProductDetail" class="card-image" src="/pages/images/Nike.jpg"> </image>
-    <view class="h1 product">This is my Product </view>
-    <view class="p2 product-description">This is my description 
-    </view>
-  </view>
 </view> 

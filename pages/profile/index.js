@@ -8,11 +8,19 @@ Page({
    */
   data: {
     currentUser:{},
-    story:[]
+    story:[],
+    tabName:''
   },
   /**
    * Lifecycle function--Called when page load
    */
+  viewTab: function(e){
+    let name = e.currentTarget.dataset.name;
+    this.setData({
+      tabName: name
+    })
+  },
+
   userInfoHandler: function(data){
     wx.BaaS.auth.loginWithWechat(data).then(user =>{
       app.globalData.userInfo = user;
@@ -22,8 +30,31 @@ Page({
       })
     });
   },
+
+  
+
   onLoad: function (options) {
+    this.setData({
+      currentUser: app.globalData.userInfo,
+    });
+    let tableName = "redStory";
+    // let storyID = options.id;
+    let Story = new wx.BaaS.TableObject(tableName);
+    Story.find().then((res) =>{
+      console.log('res', res);
+      this.setData({
+        story: res.data.objects
+      })
+    });
+    let query = new wx.BaaS.Query();
+    let user = app.globalData.userInfo;
+    console.log('user',user);
+    query.compare('userName','=', user.nickname);
     
+    Story.setQuery(query).find().then((res) =>{
+      console.log('comment detail', res);
+      this.setData({story: res.data.objects})
+    })
   },
 
   /**
@@ -37,6 +68,7 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
+    
     this.setData({
       currentUser: app.globalData.userInfo,
     });

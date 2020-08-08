@@ -25,10 +25,14 @@
 .nickname {
   font-size: 18px;
 }
-.tabss {
+.tabs {
   display: flex;
   align-items: space-evenly;
 }
+.activeTab {
+  background-color: pink;
+}
+
 .cards {
   display: flex;
   flex-wrap: wrap;
