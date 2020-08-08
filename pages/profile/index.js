@@ -10,7 +10,6 @@ Page({
     currentUser:{},
     story:[]
   },
-
   /**
    * Lifecycle function--Called when page load
    */

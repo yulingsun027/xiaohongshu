@@ -1,4 +1,5 @@
 <!--pages/profile/index.wxml-->
+
 <view class="btn-area">
     <button wx:if="{{!currentUser}}" formType="submit" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">Login</button>
 </view>
@@ -6,11 +7,29 @@
 <view class="card-product">
   <image class="avatar" src="{{currentUser.avatar}}"></image>
     <view class="card-product-infos">
-    <view class="nickname">Username:</view> 
-    <view class="nickname"> {{currentUser.nickname}} </view>
+    <view class="h1 nickname">Username:</view> 
+    <view class="h1 nickname"> {{currentUser.nickname}} </view>
     </view>
 </view>
 
-<view class="posts-feed">
-<view class="post-feed-info"> Product Cart </view>
+<view class="cards"> 
+<view class="tabss">
+<view style="padding-left: 60px;" class="h1">My Post</view>
+<view style="padding-left: 60px;" class="h1">My Cart</view>
 </view>
+
+  <view class="card"> 
+  
+    <image class="card-image" src="/pages/images/Nike.jpg"> </image>
+    <view class="h1 product">This is my Product </view>
+    <view class="p2 product-description">This is my description 
+    </view>
+  </view>
+
+  <view class="card"> 
+    <image bindTap="toProductDetail" class="card-image" src="/pages/images/Nike.jpg"> </image>
+    <view class="h1 product">This is my Product </view>
+    <view class="p2 product-description">This is my description 
+    </view>
+  </view>
+</view> 
