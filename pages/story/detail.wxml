@@ -1,13 +1,13 @@
 <view class="card-product">
     <view class="card">
     <view class="topBar">
-    <image src="/pages/images/avatar.jpeg" class="avatar"></image>
-    <view class="p">Username</view>
+    <image src="{{story.userAvatar}}" class="avatar"></image>
+    <view class="p">{{story.userName}}</view>
     </view>
-      <image class= "imageStory" src="https://img.redbull.com/images/c_crop,x_740,y_0,h_1080,w_864/c_fill,w_860,h_1075/q_auto,f_auto/redbullcom/2018/10/01/cffd44d9-3d3f-424c-8e7f-7ad5bc33c668/forza-horizon-4-1964-jaguar-lightweight-e-type"></image> 
+      <image class= "imageStory" src="{{story.storyImg}}"></image> 
       <view class="card-content">
-        <view style="padding-left: 10px;" class="h1">Title</view>
-        <view style="padding-left: 10px;" class="p">Description</view>
+        <view style="padding-left: 10px;" class="h1">{{story.title}}</view>
+        <view style="padding-left: 10px;" class="p">{{story.description}}</view>
     </view>
     <view class="storyBar">
     <image style="padding-left: 10px;" src="/pages/images/heart.png" class="likeButton"></image>

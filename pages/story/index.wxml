@@ -1,6 +1,6 @@
 <view class="cards">
-    <view class="card" wx:for="{{story}}" wx:for-item="story">
-      <image class="imageStory" src="{{story.storyImg}}" bindtap="toDetail"></image> 
+    <view class="card" wx:for="{{stories}}" wx:for-item="story" data-id="{{story.id}}" bindtap="toDetail">
+      <image class="imageStory" src="{{story.storyImg}}"></image> 
       <view class="card-content">
         <view class="h1">{{story.title}}</view>
         <!-- <view class="p">{{story.description}}</view> -->

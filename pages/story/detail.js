@@ -5,13 +5,21 @@ Page({
    * Page initial data
    */
   data: {
-
+    story:{}
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    console.log("this is on detail page",options)
+    let tableName1 = 'redStory';
+    let storyID = options.id;
+    let Story = new wx.BaaS.TableObject(tableName1);
+    Story.get(storyID).then((res)=>{
+      console.log('res detail', res);
+      this.setData({story: res.data});
+    });
 
   },
 
