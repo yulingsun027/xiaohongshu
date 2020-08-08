@@ -7,7 +7,8 @@
     "pages/product/index",
     "pages/product/detail",
     "pages/profile/like",
-    "pages/profile/cart"
+    "pages/profile/cart",
+    "pages/story/post"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -22,6 +23,12 @@
         "text": "Home",
         "iconPath": "/pages/images/home.png",
         "selectedIconPath": "/pages/images/home.png"
+      },
+      {
+        "pagePath": "pages/story/post",
+        "text": "post",
+        "iconPath": "/pages/images/shop.png",
+        "selectedIconPath": "/pages/images/shop.png"
       },
       {
         "pagePath": "pages/product/index",

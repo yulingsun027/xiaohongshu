@@ -1,5 +1,5 @@
-// pages/profile/index.js
-const app = getApp();
+// pages/story/post.js
+let app = getApp();
 
 Page({
 
@@ -7,24 +7,14 @@ Page({
    * Page initial data
    */
   data: {
-    currentUser:{},
-    story:[]
+    currentUser:{}
   },
 
   /**
    * Lifecycle function--Called when page load
    */
-  userInfoHandler: function(data){
-    wx.BaaS.auth.loginWithWechat(data).then(user =>{
-      app.globalData.userInfo = user;
-      wx.setStorageSync('userInfo', user);
-      this.setData({
-        currentUser: user
-      })
-    });
-  },
   onLoad: function (options) {
-    
+
   },
 
   /**
@@ -41,7 +31,6 @@ Page({
     this.setData({
       currentUser: app.globalData.userInfo,
     });
-
   },
 
   /**
