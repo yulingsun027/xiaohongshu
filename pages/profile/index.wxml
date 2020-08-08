@@ -42,9 +42,12 @@
       <image class="imageproduct" src="{{myorder.product_id.Productimage}}"></image> 
       <view class="card-content">
         <view class="h1">{{myorder.product_id.name}}</view>
-        <view class="p">{{myorder.product_id.price}}</view>
+        <view class="p">￥{{myorder.product_id.price}}</view>
       </view>
     </view>
+  <view class="h1 btn-area">
+    <button>checkout!</button>
+  </view>
 </view>
   
   <!-- <view class="card"> 
