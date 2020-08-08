@@ -1,0 +1,24 @@
+
+<!-- <image class="avatar" src="{{currentUser.avatar}}"></image> -->
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+
+  <view class="section">
+    <view class="h1 section__title">title:</view>
+    <input class="p" name="name" value="{{userInfo.nickName}}" placeholder="your post title" />
+  </view>
+  
+  <view class="section">
+    <view class="h1 section__title">description:</view>
+    <textarea class="p" name="content" placeholder="what's your story?" ></textarea> 
+  </view>
+
+<view class="section">
+    <view class="h1 section__title">image:</view>
+    <textarea class="p" name="content" placeholder="select an img!" ></textarea> 
+  </view>
+
+  <view class="h1 btn-area">
+    <button formType="post">Submit</button>
+  </view>
+</form>

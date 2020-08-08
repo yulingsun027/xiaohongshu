@@ -1,25 +1,19 @@
-// pages/story/detail.js
+// pages/story/post.js
+let app = getApp();
+
 Page({
 
   /**
    * Page initial data
    */
   data: {
-    story:{}
+    currentUser:{}
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    console.log("this is on detail page",options)
-    let tableName1 = 'redStory';
-    let storyID = options.id;
-    let Story = new wx.BaaS.TableObject(tableName1);
-    Story.get(storyID).then((res)=>{
-      console.log('res detail', res);
-      this.setData({story: res.data});
-    });
 
   },
 
@@ -34,7 +28,9 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-
+    this.setData({
+      currentUser: app.globalData.userInfo,
+    });
   },
 
   /**

@@ -39,9 +39,9 @@ Page({
    */
   onShow: function () {
     this.setData({
-    
       currentUser: app.globalData.userInfo,
     });
+
   },
 
   /**

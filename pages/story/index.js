@@ -11,13 +11,20 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
+  toDetail: function(e){
+    let id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: `/pages/story/detail?id=${id}`,
+    })
+  },
+
   onLoad: function (options) {
     let tableName = "redStory";
     let Story = new wx.BaaS.TableObject(tableName);
     Story.find().then((res) =>{
       console.log('res', res);
       this.setData({
-        story: res.data.objects
+        stories: res.data.objects
       })
     });
   },
@@ -28,7 +35,7 @@ Page({
   onReady: function () {
 
   },
-
+  
   /**
    * Lifecycle function--Called when page show
    */

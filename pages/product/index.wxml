@@ -1,3 +1,4 @@
+
 <view class="cards"> 
   <view class="card"> 
     <image class="card-image" src="/pages/images/Nike.jpg"> </image>
@@ -15,4 +16,3 @@
     <view class="priceText">$100</view>
   </view>
 </view> 
-
