@@ -11,6 +11,14 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
+  toDetail: function(e){
+    console.log('select story',e);
+    let id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: `/pages/story/detail?id=${id}`,
+    })
+  },
+
   onLoad: function (options) {
     let tableName = "redStory";
     let Story = new wx.BaaS.TableObject(tableName);
