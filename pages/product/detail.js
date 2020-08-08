@@ -5,14 +5,21 @@ Page({
    * Page initial data
    */
   data: {
-
+    product:{}
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    console.log("this is a product page",options)
+    let tableName1 = 'redProduct';
+    let productID = options.id;
+    let Product = new wx.BaaS.TableObject(tableName1);
+    Product.get(productID).then((res)=>{
+      console.log('res detail', res);
+      this.setData({product: res.data});
+    });
   },
 
   /**

@@ -40,7 +40,6 @@ Page({
     })
   },
   bindTitleInput: function(e){
-    console.log(e);
     this.setData({
       title: e.detail.value
     })
@@ -65,7 +64,6 @@ Page({
         description:this.data.description,
         storyImg: this.data.imgURL[0],
     };
-    console.log(this.data.imgURL);
 
     myStory.set(data).save().then(res => {
       console.log('save story', res);

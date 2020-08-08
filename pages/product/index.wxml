@@ -1,18 +1,9 @@
 
 <view class="cards"> 
-  <view class="card" bindTap="toProductDetail"> 
-    <image class="card-image" src="/pages/images/Nike.jpg"> </image>
-    <view class="h1 product">This is my Product </view>
-    <view class="p2 product-description">This is my description 
-    </view>
-    <view class="priceText">$100</view>
+  <view class="card" wx:for="{{products}}" wx:for-item="product" data-id="{{product.id}}" bindtap="toProductDetail"> 
+    <image class="card-image" src="{{product.Productimage}}"></image>
+    <view class="h1 product">{{product.name}}</view>
+    <!-- <view class="p2 product-description">{{product.description}}</view> -->
+    <view class="priceText">￥{{product.price}}</view>
   </view>
-
-  <view class="card"> 
-    <image bindTap="toProductDetail" class="card-image" src="/pages/images/Nike.jpg"> </image>
-    <view class="h1 product">This is my Product </view>
-    <view class="p2 product-description">This is my description 
-    </view>
-    <view class="priceText">$100</view>
-  </view>
-</view> 
+</view>
