@@ -28,7 +28,7 @@ Page({
   onReady: function () {
 
   },
-
+  
   /**
    * Lifecycle function--Called when page show
    */

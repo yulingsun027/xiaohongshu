@@ -3,12 +3,11 @@
   display: flex;
   object-fit: contain;
   width: 100%;
-  
   float: left;
   -webkit-box-sizing: border-box;
   -webkit-border-radius: 3px;
 }
-.card {
+/* .card {
   background-color: white;
   border-radius: 0.25rem;
   box-shadow: 1.5px 2.5px 2.5px 1.5px rgba(0, 0, 0, 0.18);
@@ -16,8 +15,8 @@
   flex-direction: column;
   overflow: hidden;
   width: 100%;
-  
-}
+  height: 1000000px;
+} */
 .avatar {
   border-radius: 50%;
   width: 30px;
@@ -34,6 +33,12 @@
   height: 30px
 }
 .imageStory {
-  max-width: 12450px;
-  max-height: 12450px;
+  width: 375px;
+  height: 500px;
+}
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 10px;
 }
