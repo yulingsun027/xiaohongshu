@@ -5,12 +5,14 @@ Page({
    * Page initial data
    */
   data: {
+
     products:[],
-    indicatorDots:true,
-    autoplay:true,
-    interval:5000,
-    duration:1000,
-    imgUrls:[
+      indicatorDots:true,
+      autoplay:true,
+      interval:5000,
+      duration:1000,
+      imgUrls:[
+
         "/pages/images/saul.jpg",
         "/pages/images/chris.jpg",
         "/pages/images/alliance.jpg",
