@@ -27,8 +27,8 @@
       {
         "pagePath": "pages/story/post",
         "text": "post",
-        "iconPath": "/pages/images/shop.png",
-        "selectedIconPath": "/pages/images/shop.png"
+        "iconPath": "/pages/images/add.png",
+        "selectedIconPath": "/pages/images/add.png"
       },
       {
         "pagePath": "pages/product/index",

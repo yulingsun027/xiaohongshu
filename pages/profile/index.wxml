@@ -14,5 +14,3 @@
 <view class="posts-feed">
 <view class="post-feed-info"> Product Cart </view>
 </view>
-
-<button>create your post!</button>
