@@ -15,7 +15,7 @@
 
 <view class="section">
     <view class="section__title">image</view>
-    <textarea name="content" placeholder="select an img!" ></textarea> 
+    <textarea name="content" placeholder="click to select an img!" ></textarea> 
   </view>
 
   <view class="btn-area">
