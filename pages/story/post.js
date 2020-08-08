@@ -7,12 +7,38 @@ Page({
    * Page initial data
    */
   data: {
-    currentUser:{}
+    currentUser:{},
+    imgURL:[]
   },
 
   /**
    * Lifecycle function--Called when page load
    */
+  
+  selectImg: function (){
+    const page = this;
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original'],
+      sourceType: ['album', 'camera'],
+      success: function (res) {
+        let tempFilePaths = res.tempFilePaths
+        console.log(tempFilePaths)
+        page.setData({
+          imgURL: tempFilePaths
+        })
+      }
+    })
+  },
+  previewMyImage: function(e) {
+    let url = e.currentTarget.dataset.url;
+    wx.previewImage({
+      current: url,  // number of index or file path
+      urls: [url]  // Array of temp files
+    })
+  },
+
+
   onLoad: function (options) {
 
   },
