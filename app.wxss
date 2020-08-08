@@ -30,3 +30,12 @@
     letter-spacing: 0.5px;
     margin-bottom: 1.25rem;
   }
+  .priceText {
+    color: #e63946;
+    flex: 1 1 auto;
+    line-height: 1.5;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-bottom: 1.25rem;
+    font-size: 150%;
+  }
