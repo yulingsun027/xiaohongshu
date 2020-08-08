@@ -1,2 +1,12 @@
-<!--pages/product/detail.wxml-->
-<text>pages/product/detail.wxml</text>
+<view class="cards"> 
+  <view class="card"> 
+    <image class="card-image" src="/pages/images/Nike.jpg"> </image>
+    <view style="padding-left: 10px;" class="priceText">$100</view>
+    </view>
+    <view style="padding-left: 10px;" class="h1 product">This is my Product </view>
+    <view style="padding-left: 10px;" class="p2 product-description">This is my description 
+    </view>
+    <view style="padding-left: 10px;" class="h1 btn-area">
+    <button style="font-weight: bold;" class="h1">Add to cart</button>
+  </view>
+  </view>

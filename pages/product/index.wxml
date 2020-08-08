@@ -1,6 +1,6 @@
 
 <view class="cards"> 
-  <view class="card"> 
+  <view class="card" bindTap="toProductDetail"> 
     <image class="card-image" src="/pages/images/Nike.jpg"> </image>
     <view class="h1 product">This is my Product </view>
     <view class="p2 product-description">This is my description 
@@ -9,7 +9,7 @@
   </view>
 
   <view class="card"> 
-    <image class="card-image" src="/pages/images/Nike.jpg"> </image>
+    <image bindTap="toProductDetail" class="card-image" src="/pages/images/Nike.jpg"> </image>
     <view class="h1 product">This is my Product </view>
     <view class="p2 product-description">This is my description 
     </view>

@@ -1,1 +1,4 @@
-/* pages/product/detail.wxss */
+.card-image {
+  width: 375px;
+  height: 500px;
+}
