@@ -5,14 +5,24 @@ Page({
    * Page initial data
    */
   data: {
-
+    products:[]
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+  
+    let tableName = "redOrder";
+  
+    let Order = new wx.BaaS.TableObject(tableName);
+    Order.find().expand(['product_id']).then((res) =>{
+      console.log('res1', res);
+      this.setData({
+        orders: res.data.objects
+      })
+    });
+    
   },
 
   /**
