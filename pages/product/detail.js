@@ -35,7 +35,7 @@ Page({
     }
     order.set(data).save().then((res)=>{
       wx.showToast({
-        title: 'order added!',
+        title: 'order added!checkout in profile page!',
         icon:'success',
         duration:2000,
         mask: true
